@@ -22,16 +22,14 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        val registerButton = findViewById<Button>(R.id.btnRegister)
-        val registerEmailTextView = findViewById<TextView>(R.id.editTextRegisterEmail)
+        val registerButton           = findViewById<Button>(R.id.btnRegister)
+        val registerEmailTextView    = findViewById<TextView>(R.id.editTextRegisterEmail)
         val registerPasswordTextView = findViewById<TextView>(R.id.editTextRegisterPassword)
-        val textViewLogin = findViewById<TextView>(R.id.textViewLogin)
+        val textViewLogin            = findViewById<TextView>(R.id.textViewLogin)
 
         textViewLogin?.setOnClickListener{
-            startActivity(Intent(this@RegisterActivity,
-                LoginActivity::class.java))
+            onBackPressed()
         }
-
 
         registerButton?.setOnClickListener()
         {
@@ -64,8 +62,7 @@ class RegisterActivity : AppCompatActivity() {
                     // Register the user
                     FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(
-                        {
-                            task ->
+                        { task ->
                                 if (task.isSuccessful)
                                 {
                                     val firebaseUser: FirebaseUser = task.result!!.user!!
@@ -94,12 +91,9 @@ class RegisterActivity : AppCompatActivity() {
                                         Toast.LENGTH_SHORT
                                     ).show()
                                 }
-                        }
-                        )
+                        })
                 }
             }
         }
-
     }
-
 }
