@@ -25,6 +25,12 @@ class RegisterActivity : AppCompatActivity() {
         val registerButton = findViewById<Button>(R.id.btnRegister)
         val registerEmailTextView = findViewById<TextView>(R.id.editTextRegisterEmail)
         val registerPasswordTextView = findViewById<TextView>(R.id.editTextRegisterPassword)
+        val textViewLogin = findViewById<TextView>(R.id.textViewLogin)
+
+        textViewLogin?.setOnClickListener{
+            startActivity(Intent(this@RegisterActivity,
+                LoginActivity::class.java))
+        }
 
 
         registerButton?.setOnClickListener()
@@ -92,35 +98,8 @@ class RegisterActivity : AppCompatActivity() {
                         )
                 }
             }
-
-
         }
 
     }
-/*
-    fun register(view: View)
-    {
-        val email    = editTextEmailAddress.text.toString()
-        val password = editTextPassword.text.toString()
 
-        auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener{ task ->
-            if(task.isSuccessful)
-            {
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
-
-        }.addOnFailureListener { Toast.makeText(applicationContext,exception.localizedMessage,
-                                 Toast.LENGTH_LONG) }.show()
-
-    }
-
-    fun goToLogin(view: View)
-    {
-        val intent = Intent(this, LoginActivity::class.java)
-        startActivity(intent)
-    }
-
- */
 }

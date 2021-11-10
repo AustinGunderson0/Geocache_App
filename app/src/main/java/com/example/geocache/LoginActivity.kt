@@ -1,43 +1,32 @@
 package com.example.geocache
 
 import androidx.appcompat.app.AppCompatActivity
+import android.text.TextUtils
 import android.os.Bundle
+import android.widget.Toast
+import android.widget.Button
+import android.widget.TextView
+import android.content.Intent
+import android.app.Activity
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.FirebaseAuthKtxRegistrar
+import com.google.firebase.auth.FirebaseUser
 
 class LoginActivity : AppCompatActivity() {
-
-    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        auth = FirebaseAuth.getInstance()
-    }
+        val textViewRegister = findViewById<TextView>(R.id.textViewRegister)
 
-/*    fun login(view: View) {
-        val email = editTextEmailAddress.text.toString()
-        val password = editTextPassword.text.toString()
-
-        auth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
-            if (task.isSuccessful) {
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
-        }.addOnFailureListener { exception ->
-            Toast.makeText(applicationContext, exception.localizedMessage, Toast.LENGTH_LONG).show()
-
+        textViewRegister?.setOnClickListener{
+            startActivity(Intent(this@LoginActivity,
+                                 RegisterActivity::class.java))
         }
-    }
-
-    fun goToLogin(view: View)
-    {
-        val intent = Intent(this, LoginActivity::class.java)
-        startActivity(intent)
 
     }
 
- */
+
 }
