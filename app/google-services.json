@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "86498081377",
+    "project_id": "cs436-geocache",
+    "storage_bucket": "cs436-geocache.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:86498081377:android:5398e3ab28db9812e40820",
+        "android_client_info": {
+          "package_name": "com.example.geocache"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "86498081377-c4tue1im56ce1j74hb2dpal0a50ppkqc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.geocache",
+            "certificate_hash": "6f9830a4e9537c197cc0bdaa5beee13a787bafb5"
+          }
+        },
+        {
+          "client_id": "86498081377-ehtvi0c3iurkol885846c5ge7oo1vtlm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfFWe-8IQojtmjfR3qFCEfJVvNUDgiMb8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "86498081377-ehtvi0c3iurkol885846c5ge7oo1vtlm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
