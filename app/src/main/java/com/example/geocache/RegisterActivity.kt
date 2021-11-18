@@ -74,7 +74,7 @@ class RegisterActivity : AppCompatActivity() {
                                     ).show()
 
                                     // After successful, send user to Main activity
-                                    val intent = Intent( this@RegisterActivity, MainActivity::class.java)
+                                    val intent = Intent( this@RegisterActivity, MapsActivity::class.java)
                                                  intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or
                                                                 Intent.FLAG_ACTIVITY_CLEAR_TASK
                                                  intent.putExtra("userID", firebaseUser.uid)
